@@ -7,6 +7,6 @@ public class Rabbit {
 		System.out.println("    (   >♡");
 		System.out.println(" Have a Good Time.");
 		System.out.println("===================");
-	}
+	} 
 
 }
