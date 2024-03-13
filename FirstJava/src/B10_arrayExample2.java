@@ -4,7 +4,7 @@ public class B10_arrayExample2 {
 	public static void main(String[] args) {
 		// 다차원 배열
 		// 1차원 배열 : 데이터 타입이 int로 구성되어 있는 배열... 
-		int[] numbers = { 1, 2, 3, 4, 5};
+		int[] numbers = {1, 2, 3, 4, 5};
 		
 		// 배열의 요소는 length - 1 번 공간(방, 저장공간)까지 존재함.
 		System.out.println(numbers[numbers.length - 1]);

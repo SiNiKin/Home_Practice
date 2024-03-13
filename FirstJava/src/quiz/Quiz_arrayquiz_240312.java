@@ -20,7 +20,8 @@ public class Quiz_arrayquiz_240312 {
 				sum += numArr[i][j];
 			}
 		}
-		
+		System.out.println(items);
+		System.out.println(numArr.length);
 		System.out.println("총 합 : "+sum);
 		System.out.println("평 균 : "+(int)((sum / (double)items)*100)/100.0);
 		

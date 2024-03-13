@@ -78,9 +78,21 @@ public class C00_CustomerManager {
 				break;
 			case 'ㅕ':
 			case 'u':
+				System.out.println("현재 데이터를 업데이트 합니다.");
+				if ((index >= 0) && (index < count)) {
+					updateCustomerData(index);
+				}else {
+					System.out.println("업데이트 할 데이터가 선택되지 않았습니다.");
+				}
 				break;
 			case 'ㅇ':
 			case 'd':
+				System.out.println("현재 데이터를 삭제합니다.");
+				if ((index >= 0) && (index < count)) {
+					deleteCustomerData(index);
+				}else {
+					System.out.println("삭제할 데이터가 선택되지 않았습니다.");
+				}
 				break;
 			case 'ㅂ':
 			case 'q':  //종료

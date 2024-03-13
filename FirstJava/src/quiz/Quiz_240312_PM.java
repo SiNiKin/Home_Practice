@@ -22,6 +22,7 @@ public class Quiz_240312_PM {
 			// 소수인 경우... 
 			if (cnt == 2) System.out.print(i + " ");
 		}
+		
 		System.out.println();
 		// 2. 단어 거꾸로 출력하기(reverse 출력)
 		//   자바의 Scanner 객체를 이용하여 콘솔에 데이터를 입력
