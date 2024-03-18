@@ -15,52 +15,70 @@ public class HP1 {
 
 
 //		2. 1 ~ 200 사이의 수 중에서 2 또는 3의 배수가 아닌 수들의 총 합을 구해보세요.
-		
-		/*
-		 *  int sum = 0;
-		 *  for (int i = 1; i <= 200; i++) {
-		 * 		if (!(i % 2 == 0 || i % 3 == 0)) {
-		 * 			sum += i;
-		 * 		}
-		 * 	}
-		 *  System.out.println(sum);
-		 */
+				
+//		int re = 0;
+//		for (int i = 1; i < 200; i++) {
+//			if (i % 2 != 0 && i % 3 != 0) {
+//				System.out.println(i);
+//				re += i;
+//			}else continue;
+//		}
+//		System.out.println(re);
 
 //		3. 1 + (1+2) + (1+2+3) + (1+2+3+4) + (1+2+3+4+5)+ .... +(1+2+3+4+5+6+7+8+9+10)
 //		의 결과를 구해보세요.
 		
-		int result = 0;
-		for (int i = 1; i <= 10; i++) {
-			if(i != 1) System.out.print("+(");
-			for (int j = 1; j <= i; j++) {
-				result += j;
-				System.out.print(j);
-				if (j != i) System.out.print("+");
-			}
-			if(i != 1) System.out.print(")");
-		}
-		System.out.println("=" + result);
+//		int result = 0;
+//		for (int i = 1; i <= 10; i++) {
+//			if(i != 1) System.out.print("+(");
+//			for (int j = 1; j <= i; j++) {
+//				result += j;
+//				System.out.print(j);
+//				if (j != i) System.out.print("+");
+//			}
+//			if(i != 1) System.out.print(")");
+//		}
+//		System.out.println("=" + result);
+//		
+//		int sum = 0;
+//		int sum2 = 0;
+//		for (int i = 1; i <=10; i++) {
+//			sum += i;
+//			sum2 += sum;
+//		}
+//		System.out.println(sum2);
 		
-		int sum = 0;
-		int sum2 = 0;
-		for (int i = 1; i <=10; i++) {
-			sum += i;
-			sum2 += sum;
-		}
-		System.out.println(sum2);
+//		int result = 0;
+//		for (int i = 1; i <= 10; i ++) {
+//			if(i != 1) System.out.println("+ (");
+//			for(int j = 1; j < i; j++) {
+//				result += j;
+//				System.out.println(j);
+//				System.out.println("+");
+//			}
+//			
+//		}
 		
 
 //		4. 1 ~ 101미만의 임의의 정수를 생성하고, 그 숫자가 짝수인지 홀수인지 출력하세요.(3항 연산식을 사용)
 		
-		int rand = (int)(Math.random()*100);
-		System.out.println("랜덤 수 : " + rand);
-		System.out.println((rand % 2 == 0 ? "짝수입니다." : "홀수입니다."));
+		int r = (int)(Math.random()*100);
+		System.out.println("랜덤 수 : " + r);
+		System.out.println((r % 2 == 0 ? "짝수" : "홀수"));
+		
+//		int rand = (int)(Math.random()*100);
+//		System.out.println("랜덤 수 : " + rand);
+//		System.out.println((rand % 2 == 0 ? "짝수입니다." : "홀수입니다."));
 
 //		5. -5 ~ 5 사이의 임의의 정수를 생성하고, 삼항연산식을 사용하여 절대값을 출력하세요
 		
-		int rand5 = 5 - (int)(Math.random()*11);
-		System.out.println("랜덤 수 : " + rand5);
-		System.out.println((rand5 >= 0 ? "절대값은" + rand5 : "절대값은" + rand5*-1));
+		int r5 = 5 - (int)(Math.random()*11);
+		System.out.println("랜덤 수 : " + r5);
+		System.out.println((r5 >= 0 ? "절대값은 " + r5 : "절대값은 " + r5*-1));
+		
+//		int rand5 = 5 - (int)(Math.random()*11);
+//		System.out.println("랜덤 수 : " + rand5);
+//		System.out.println((rand5 >= 0 ? "절대값은" + rand5 : "절대값은" + rand5*-1));
 
 //		6. 정수를 입력받아 그 수가 짝수 인지 홀수인지 출력하는 프로그램을 작성하세요.(3항 연산식을 사용하세요)
 		

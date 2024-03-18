@@ -23,7 +23,7 @@ public class B02_ifExample2 {
 		
 		// if ~ else문 : if조건문이 true이면 if에 종속 실행문을 그렇지 않으면 else의 실행문을 동작!
 		
-		// 정수 난수 발생 ( 0 ~ 99 )
+		// 정수 난수 발생 ( 0 ~ 99 )		
 		int jumsu = (int)(Math.random()*100);
 		System.out.println("점수 : "+ jumsu);
 		

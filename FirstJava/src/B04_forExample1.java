@@ -28,6 +28,12 @@ public class B04_forExample1 {
 		
 		
 		//예제1) for문을 사용하여 1부터 10까지 숫자들의 합~!!
+//		int sum = 0;
+//		for (i = 0; i <= 10; i++) {
+//			sum += i;
+//		}
+//		System.out.println(sum);
+		
 		int sum = 0;
 		for (i = 1;i <= 10;i++) {
 			System.out.println(i);
@@ -36,6 +42,14 @@ public class B04_forExample1 {
 		System.out.println("합은 : " + sum);
 		
 		//예제2) for문을 사용하여 1부터 100까지 홀수들의 합!!!
+//		sum = 0;
+//		for (i = 0; i <= 100; i++) {
+//			if (i % 2 != 0) {
+//				sum += i;
+//			}
+//		}
+//		System.out.println("합은 : " + sum);
+		
 		int odd = 0;
 		for (i = 1; i <= 100; i++) {
 			if(i%2 == 1) {
