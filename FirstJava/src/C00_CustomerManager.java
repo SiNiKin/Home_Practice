@@ -140,7 +140,7 @@ public class C00_CustomerManager {
 	public static void updateCustomerData(int index) {
 		System.out.println("-------UPDATE CUSTOMER INFO-------");
 		System.out.print("이름("+nameList[index]+") :");
-		String name = scan.nextLine();
+		String name = scan.next();
 		if(name.length() != 0) {  // 검증... 
 			nameList[index] = name;
 		}
