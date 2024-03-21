@@ -1,12 +1,10 @@
 package HomeP;
 
-public class HP_HR {
+public class HP_HR_C2 {
 	
 	static class Person {
 		public String name;
 		public int age;
-		
-//		public Person() {}
 		
 		public String getDetails() {
 			return "아름 : " + name + "\n나이 : " + age + "세"; 
