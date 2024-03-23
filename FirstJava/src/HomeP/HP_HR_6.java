@@ -46,7 +46,7 @@ public class HP_HR_6 {
 		void action() {
 			System.out.println("마법사는 귀여운 동작을 합니다.");
 		}
-	}
+	} 
 	
 	public static void main(String[] args) {
 
