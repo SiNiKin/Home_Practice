@@ -1,6 +1,6 @@
 package HomeP;
 
-public class HP_HR_C3 {
+public class P_C_03 {
 	
 	static class Person {
 		String name;

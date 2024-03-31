@@ -2,7 +2,7 @@ package HomeP;
 
 import java.util.Scanner;
 
-public class P_14 {
+public class P_C_14 {
 
 	public static void main(String[] args) {
 		

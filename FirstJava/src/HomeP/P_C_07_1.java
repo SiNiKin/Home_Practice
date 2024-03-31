@@ -3,7 +3,7 @@ package HomeP;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
-public class HP_HR_7_1 {
+public class P_C_07_1 {
 	
 	static class ArrayPrint{
 		void printArray(String[] arr) {

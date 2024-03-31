@@ -1,6 +1,6 @@
 package HomeP;
 
-public class P_M_2 {
+public class P_M_02 {
 
 	public static void main(String[] args) {
 		int i = (int)(5 - Math.random() * 11);

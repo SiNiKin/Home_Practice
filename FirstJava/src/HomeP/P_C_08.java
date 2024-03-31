@@ -1,6 +1,6 @@
 package HomeP;
 
-public class HP_HR_8 {
+public class P_C_08 {
 	
 	static class Player{
 		String name;

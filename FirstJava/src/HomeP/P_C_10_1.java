@@ -1,6 +1,6 @@
 package HomeP;
 
-public class HP_HR_10_1 {
+public class P_C_10_1 {
 	
 	static class Player{
 		String name;
@@ -22,29 +22,27 @@ public class HP_HR_10_1 {
 			this.mp = 500;
 		}
 		
-		void bash(Wizard p) {
-			if (mp <=100) {
+		void bash(Warrior p) {
+			if (mp <= 100) {
 				System.out.println("마나가 부족합니다.");
+				System.exit(0);
+			}else {
+				System.out.println(p.name + "님 배쉬 스킬 적중");
+				p.hp -= 150;
+				mp -= 100;
+			}
+		}
+		
+		void bash(Wizard p) {
+			if (mp <= 100) {
+				System.out.println("마나가 부족합니다.");
+				System.exit(0);
 			}else {
 				System.out.println(p.name + "님 배쉬 스킬 적중");
 				p.hp -= 200;
-				mp -=100;
+				mp -= 100;
 			}
-			System.out.println();
 		}
-		
-		void bash(Warrior p) {
-			if (mp <=100) {
-				System.out.println("마나가 부족합니다.");
-				return;
-			}else {
-				System.out.println(p.name + "님 배쉬 스킬 적중");
-				p.hp -= 100;
-				mp -=100;
-			}
-			System.out.println();
-		}
-		
 	}
 	
 	static class Wizard extends Player {
@@ -53,10 +51,10 @@ public class HP_HR_10_1 {
 			this.hp = 500;
 			this.mp = 1000;
 		}
-		
 	}
 
 	public static void main(String[] args) {
+		
 		Warrior me = new Warrior("강한친구대한전사");
 		
 		Wizard play2 = new Wizard("구르미그린마법사");
@@ -65,16 +63,12 @@ public class HP_HR_10_1 {
 		System.out.println("---나의 캐릭 배쉬스킬 사용---");
 		me.bash(play2);
 		me.bash(play3);
-		
 		me.bash(play2);
 		me.bash(play3);
-		
-		me.bash(play2);
-		me.bash(play3);
+//		me.bash(play2);
 		
 		play2.info();
 		play3.info();
-
 	}
 
 }

@@ -2,7 +2,7 @@ package HomeP;
 
 import java.util.Scanner;
 
-public class P_M_6 {
+public class P_M_06 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);

@@ -1,13 +1,13 @@
 package HomeP;
 
-public class HP_HR_C2 {
+public class P_C_02 {
 	
 	static class Person {
 		public String name;
 		public int age;
 		
 		public String getDetails() {
-			return "아름 : " + name + "\n나이 : " + age + "세"; 
+			return "이름 : " + name + "\n나이 : " + age + "세"; 
 		}
 		
 		public Person(String name, int age) {

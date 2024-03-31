@@ -1,6 +1,6 @@
 package HomeP;
 
-public class HP_HR_C1 {
+public class P_C_01 {
 	
 	static class Bread{
 		String name;

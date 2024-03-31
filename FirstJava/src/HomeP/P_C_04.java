@@ -1,6 +1,6 @@
 package HomeP;
 
-public class HP_HR_C4 {
+public class P_C_04 {
 	
 	static class Account {
 		String name;

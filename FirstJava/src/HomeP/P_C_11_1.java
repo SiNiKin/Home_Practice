@@ -1,6 +1,6 @@
 package HomeP;
 
-public class P_11_1 {
+public class P_C_11_1 {
 
 	public static class ArrayPrint{
 		void printArray(String[] arr) {

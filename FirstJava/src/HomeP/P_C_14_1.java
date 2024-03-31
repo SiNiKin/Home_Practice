@@ -3,7 +3,7 @@ package HomeP;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class P_14_1 {
+public class P_C_14_1 {
 
 	public static void main(String[] args) {
 		

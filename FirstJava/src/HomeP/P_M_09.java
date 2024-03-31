@@ -1,6 +1,6 @@
 package HomeP;
 
-public class P_M_9 {
+public class P_M_09 {
 
 	public static void main(String[] args) {
 		

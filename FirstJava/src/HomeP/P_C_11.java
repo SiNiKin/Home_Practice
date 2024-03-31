@@ -1,11 +1,9 @@
 package HomeP;
 
-public class Calculator {
-	static double pi = Math.PI;
+public class P_C_11 {
+static double pi = Math.PI;
 	
 	int result;
-
-	private int r;
 	
 	int add(int a) {
 		result += a;
@@ -27,18 +25,15 @@ public class Calculator {
 		return result;
 	}
 	
-	public static double circle(int r) {
-		return (r * 2) * pi;
+	static double Circle(int r) {
+		return (2 * r) * pi;
 	}
-	
-//	public static double circle_area(int r) {
-//		return (r * r) * pi;
-//	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("원주율 : " + pi);
-		System.out.println("원의 둘레 : " + circle(10));
+		
+		System.out.printf("원주율 : %.2f\n",pi);
+		
+		System.out.printf("원의 둘레 : %.2f",Circle(10));
 	}
 
 }
