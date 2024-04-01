@@ -13,11 +13,17 @@ public class P_M_15_1 {
 		
 		while(true) {
 			int d1 = (int)(Math.random() * 100) + 1;
-			int d2 = (int)(Math.random() * 100) + 1;
-			System.out.println(d1 + " + " + d2 + " = " + " ? ");
+			int d2 = (int)(Math.random() * -100) + 51;
+			
+			if(d2 >= 0) {
+				System.out.println(d1 + " + " + d2 + " = " + " ? ");
+			}else if (d2 < 0){
+				System.out.println(d1 + " " + d2 + " = " + " ? ");
+			}
+			
 			System.out.println("[문제를 그만 푸시려면 0을 입력하세요.");
 			System.out.print("> ");
-			int result = scan.nextInt();
+			int result = scan.nextInt(); 
 			
 			if (result == (d1 + d2)) {
 				O_cnt++;
@@ -38,6 +44,7 @@ public class P_M_15_1 {
 		}
 		
 		scan.close();
+		
 
 	}
 
