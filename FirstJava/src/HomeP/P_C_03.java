@@ -7,16 +7,16 @@ public class P_C_03 {
 		int age;
 		int tall;
 		
-		void info() {
-			System.out.println(name);
-			System.out.println(age + "세");
-			System.out.println("키 : " + tall);
-		}
-		
 		public Person(String name, int age, int tall) {
 			this.name = name;
 			this.age = age;
 			this.tall = tall;
+		}
+		
+		void info() {
+			System.out.println(name);
+			System.out.println(age + "세");
+			System.out.println("키 : " + tall);
 		}
 	}
 

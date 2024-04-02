@@ -1,7 +1,8 @@
 package HomeP;
 
 public class P_C_11 {
-static double pi = Math.PI;
+	
+	public static double pi = Math.PI;
 	
 	int result;
 	

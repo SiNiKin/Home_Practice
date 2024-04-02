@@ -1,7 +1,5 @@
 package HomeP;
 
-import java.util.Arrays;
-
 import HomeP.P_C_10_1.Warrior;
 import HomeP.P_C_10_1.Wizard;
 
@@ -58,7 +56,7 @@ public class P_C_10_2 {
 		}
 		
 		
-		void Blizzard(Player[] players) {
+		public void Blizzard(Player[] players) {
 			System.out.println("---------------------");
 			System.out.println(name + "님의 눈보라 시전 !");
 			
