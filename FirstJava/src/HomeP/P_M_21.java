@@ -27,5 +27,6 @@ public class P_M_21 {
 		System.out.println("7~9의 사이의 수의 합 : " + sumNum(5,  5));
 
 	}
+	
 
 }

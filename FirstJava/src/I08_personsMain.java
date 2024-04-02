@@ -14,6 +14,7 @@ public class I08_personsMain {
 		PersonsVO vo = new PersonsVO();
 		Scanner scan = new Scanner(System.in);
 
+		
 		// 데이터 추가
 //		System.out.println("Persons에 데이터 추가");
 //		System.out.print("성(lastname) 입력 : ");
