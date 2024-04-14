@@ -6,7 +6,7 @@ public class F04_fileWriterEx {
 
 	public static void main(String[] args) {
 		
-		File file = new File("D:/FileTest/wr.txt");
+		File file = new File("C:\\\\Users\\\\USER\\\\OneDrive\\\\바탕 화면\\\\eclipseWorkspace\\\\FileTest\\\\temp222\\\\a.txt");
 		
 		FileWriter out = null;
 		
