@@ -6,28 +6,47 @@ import JDBC.DBConnect;
 import JDBC.PlayVO;
 
 public class Event {
-	
-	public void excute() {
-		DBConnect dao = new DBConnect();
-		PlayVO vo = new PlayVO();
-
-		Scanner scan = new Scanner(System.in);
+	Scanner scan = null;
+	DBConnect dao ;
+	PlayVO vo ;
+	public Event(Scanner sc) {
+		this.scan = sc;
+		this.dao= new DBConnect();
+		this.vo = new PlayVO();
+		
 		System.out.print("사용자 이름을 입력하세요: ");
 		String playerName = scan.next();
 		scan.nextLine();
 
-		// 사용자 이름으로 데이터 조회
+		// 사용자 이름으로 데이터 조회 메서드
 		List<PlayVO> playerList = dao.allPlay();
-		boolean playerData = false;
+		boolean playerData = checkPlayer(playerList, playerName);
+		
+		// 랜덤 수 생성 메서드
+		List<Integer> comList = randomList();
+		System.out.println(comList);
+
+		// 사용자한테 입력값 받기
+		int save = playGame(comList);
+
+		// 게임 결과 출력
+		gameResult(dao, playerData, playerName, save);
+
+	}
+
+	// 사용자 이름으로 데이터 조회
+	public static boolean checkPlayer(List<PlayVO> playerList, String playerName) {
 		for (PlayVO player : playerList) {
 			if (player.getName().equals(playerName)) {
-				playerData = true;
-				System.out.println("기존 회원입니다.");
-				break;
+				System.out.println("기존 플레이어입니다.");
+				return true;
 			}
 		}
+		return false;
+	}
 
-		// 랜덤한 3자리 수 생성
+	// 랜덤한 3자리 수 생성
+	public static List<Integer> randomList() {
 		List<Integer> comList = new ArrayList<>();
 		while (comList.size() < 3) {
 			int num = (int) (Math.random() * 9) + 1;
@@ -35,9 +54,13 @@ public class Event {
 				comList.add(num);
 			}
 		}
-		System.out.println(comList);
+		return comList;
+	}
 
+	// 사용자한테 3자리수 입력값 받기
+	public int playGame(List<Integer> comList) {
 		int save = 0;
+		
 		while (true) {
 			System.out.print("3자리 수를 입력해주세요 (예: 123): ");
 			String userInput = scan.nextLine();
@@ -46,21 +69,22 @@ public class Event {
 				continue;
 			}
 
-			if (userInput.charAt(0) == userInput.charAt(1) || userInput.charAt(1) == userInput.charAt(2) || userInput.charAt(0) == userInput.charAt(2)) {
+			if (userInput.charAt(0) == userInput.charAt(1) || userInput.charAt(1) == userInput.charAt(2)
+					|| userInput.charAt(0) == userInput.charAt(2)) {
 				System.out.println("중복된 숫자가 있습니다. 다시 입력해주세요.");
-				continue; 
+				continue;
 			}
 
 			int[] userNumber = new int[3];
 			for (int i = 0; i < 3; i++) {
-				//getNumericValue() 메서드 : 주어진 문자에 해당하는 정수 값을 반환
-			    userNumber[i] = Character.getNumericValue(userInput.charAt(i));
+				// getNumericValue() 메서드 : 주어진 문자에 해당하는 정수 값을 반환
+				userNumber[i] = Character.getNumericValue(userInput.charAt(i));
 			}
 
 			save++;
-			
+
 			// B,S,O 나누기
-			int strikes = 0, balls = 0, out = 0;
+			int strikes = 0, balls = 0, outs = 0;
 			for (int i = 0; i < 3; i++) {
 				for (int j = 0; j < 3; j++) {
 					if (userNumber[i] == comList.get(j)) {
@@ -71,29 +95,27 @@ public class Event {
 						}
 					}
 				}
-				if(!comList.contains(userNumber[i])) {
-					out++;
-				}
 			}
-			
+			outs = 3 - (strikes + balls);
 
 			// 게임 결과 출력
 			if (strikes == 3) {
 				System.out.println("3Strike 입니다!! " + save + "번 만에 맞추셨습니다.");
-				if (playerData) {
-					// 기존 점수 업데이트
-					dao.updatePlay(new PlayVO(playerName, save));
-				} else {
-					dao.insert(new PlayVO(playerName, save));
-				}
 				break;
 			} else {
-				
-				System.out.println(balls + "B " + strikes + "S " + out + "O");
+				System.out.println(strikes + "S " + balls + "B " + outs + "O");
 			}
 		}
 
-		scan.close();
+		return save;
+	}
+
+	// 기존 플레이어일 경우 점수 업데이트
+	public static void gameResult(DBConnect dao, boolean playerData, String playerName, int save) {
+		if (playerData) {
+			dao.updatePlay(save, playerName);;
+		} else {
+			dao.insert(playerName, save);;
+		}
 	}
 }
-
